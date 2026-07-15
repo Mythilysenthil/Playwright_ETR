@@ -3,6 +3,7 @@ import{chromium,Browser} from '@playwright/test'
 import{CustomWorld}from '../world/CustomWorld'
 import {logger}from '../utilities/logger'
 import { BasePage } from '../pages/BasePage'
+import { filterpage } from '../pages/filterPage'
 
 let browser : Browser
 setDefaultTimeout(90 * 1000);
@@ -18,6 +19,7 @@ Before(async function(this:CustomWorld,scenario){
     this.browserContext=await browser.newContext()
     this.page = await this.browserContext.newPage()
     this.bp=new BasePage(this.page)
+    this.fp = new filterpage(this.page)
 })
 
 After(async function(this:CustomWorld,scenario){
