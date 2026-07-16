@@ -1,7 +1,6 @@
 import { Locator, Page } from '@playwright/test';
 import { logger } from '../utilities/logger';
-import { getEnv } from '../utilities/envReader'
-import { TIMEOUTS } from "../constants/timeouts";
+import { getEnv } from '../utilities/envReader';
 
 export class BasePage {
 
@@ -51,4 +50,16 @@ export class BasePage {
             throw error;
         }
     }
+
+    async Enter(): Promise<void> {
+        try {
+            logger.info('Pressing Enter key');
+            await this.page.keyboard.press('Enter');
+            logger.info('Enter key pressed successfully');
+        } catch (error) {
+            logger.error(`Failed to press Enter: ${error}`);
+            throw error;
+        }
+    }
+
 }
