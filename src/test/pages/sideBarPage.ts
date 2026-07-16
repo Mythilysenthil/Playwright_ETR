@@ -10,4 +10,5 @@ export class AddcoursePage extends BasePage{
         this.summary = page.locator("//button[@aria-label='Training Summary']");
         this.addCourse = page.locator("//button[@aria-label='Add Training']");
     }
+    
 }
