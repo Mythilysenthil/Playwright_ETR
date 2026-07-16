@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "launch-website;launch-the-url",
-        "keyword": "Scenario",
-        "line": 2,
-        "name": "Launch the url",
+        "id": "tamilkumar-15-07-2026-filter-feature;filter-employee-records-by-valid-employee-name",
+        "keyword": "Scenario Outline",
+        "line": 10,
+        "name": "Filter employee records by valid employee name",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 382618000
+              "duration": 279192900
             }
           },
           {
@@ -23,24 +23,37 @@
             "line": 3,
             "name": "User launch the url",
             "match": {
-              "location": "src\\test\\steps\\lauch.steps.ts:3"
+              "location": "src\\test\\steps\\lauch.steps.ts:4"
             },
             "result": {
               "status": "passed",
-              "duration": 677737999
+              "duration": 725738300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "User enters \"Sriram\" in the Employee Name filter",
+            "match": {
+              "location": "src\\test\\steps\\filterEmployeeName.steps.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1747422299
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 4,
-            "name": "User can see the website",
+            "line": 6,
+            "name": "Only records with employee name \"Sriram\" should be displayed",
             "match": {
-              "location": "src\\test\\steps\\lauch.steps.ts:8"
+              "location": "src\\test\\steps\\filterEmployeeName.steps.ts:9"
             },
             "result": {
               "status": "passed",
-              "duration": 2255199
+              "duration": 48601000
             }
           },
           {
@@ -48,7 +61,73 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 247306500
+              "duration": 92321099
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "tamilkumar-15-07-2026-filter-feature;filter-employee-records-by-valid-employee-name",
+        "keyword": "Scenario Outline",
+        "line": 11,
+        "name": "Filter employee records by valid employee name",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 302952000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "User launch the url",
+            "match": {
+              "location": "src\\test\\steps\\lauch.steps.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 556774199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "User enters \"Jagadeep\" in the Employee Name filter",
+            "match": {
+              "location": "src\\test\\steps\\filterEmployeeName.steps.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1114898900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Only records with employee name \"Jagadeep\" should be displayed",
+            "match": {
+              "location": "src\\test\\steps\\filterEmployeeName.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37480100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 76649500
             }
           }
         ],
@@ -56,11 +135,11 @@
         "type": "scenario"
       }
     ],
-    "id": "launch-website",
+    "id": "tamilkumar-15-07-2026-filter-feature",
     "line": 1,
     "keyword": "Feature",
-    "name": "Launch Website",
+    "name": "TamilKumar 15-07-2026 Filter feature",
     "tags": [],
-    "uri": "src\\test\\features\\lauch.feature"
+    "uri": "src\\test\\features\\filter.feature"
   }
 ]
