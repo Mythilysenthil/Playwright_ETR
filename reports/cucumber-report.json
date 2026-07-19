@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 279192900
+              "duration": 270132400
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 725738300
+              "duration": 544895700
             }
           },
           {
@@ -36,11 +36,11 @@
             "line": 5,
             "name": "User enters \"Sriram\" in the Employee Name filter",
             "match": {
-              "location": "src\\test\\steps\\filterEmployeeName.steps.ts:4"
+              "location": "src\\test\\steps\\filterEmployeeName.steps.ts:10"
             },
             "result": {
               "status": "passed",
-              "duration": 1747422299
+              "duration": 1117119399
             }
           },
           {
@@ -49,11 +49,11 @@
             "line": 6,
             "name": "Only records with employee name \"Sriram\" should be displayed",
             "match": {
-              "location": "src\\test\\steps\\filterEmployeeName.steps.ts:9"
+              "location": "src\\test\\steps\\filterEmployeeName.steps.ts:14"
             },
             "result": {
               "status": "passed",
-              "duration": 48601000
+              "duration": 48934999
             }
           },
           {
@@ -61,7 +61,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 92321099
+              "duration": 111119000
             }
           }
         ],
@@ -80,7 +80,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 302952000
+              "duration": 315941399
             }
           },
           {
@@ -93,33 +93,33 @@
             },
             "result": {
               "status": "passed",
-              "duration": 556774199
+              "duration": 615042999
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 5,
-            "name": "User enters \"Jagadeep\" in the Employee Name filter",
+            "name": "User enters \"Priya\" in the Employee Name filter",
             "match": {
-              "location": "src\\test\\steps\\filterEmployeeName.steps.ts:4"
+              "location": "src\\test\\steps\\filterEmployeeName.steps.ts:10"
             },
             "result": {
               "status": "passed",
-              "duration": 1114898900
+              "duration": 1625839500
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 6,
-            "name": "Only records with employee name \"Jagadeep\" should be displayed",
+            "name": "Only records with employee name \"Priya\" should be displayed",
             "match": {
-              "location": "src\\test\\steps\\filterEmployeeName.steps.ts:9"
+              "location": "src\\test\\steps\\filterEmployeeName.steps.ts:14"
             },
             "result": {
               "status": "passed",
-              "duration": 37480100
+              "duration": 35417699
             }
           },
           {
@@ -127,7 +127,74 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 76649500
+              "duration": 115855999
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "tamilkumar-15-07-2026-filter-feature;verify-user-can-search-a-course-by-a-valid-course-name",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Verify user can search a course by a valid course name",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 282891899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "User launch the url",
+            "match": {
+              "location": "src\\test\\steps\\lauch.steps.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 622190200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "the user enters a valid course name in the Course Name filter",
+            "match": {
+              "location": "src\\test\\steps\\filterEmployeeName.steps.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 278106099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "only the matching course records should be displayed",
+            "match": {
+              "location": "src\\test\\steps\\filterEmployeeName.steps.ts:31"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 44375899,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at captureRawStack (E:\\Playwright_ETR\\node_modules\\playwright-core\\lib\\coreBundle.js:3172:17)\n    at callMatcherAsStep (E:\\Playwright_ETR\\node_modules\\playwright\\lib\\matchers\\expect.js:12877:57)\n    at Object.toBeGreaterThan (E:\\Playwright_ETR\\node_modules\\playwright\\lib\\matchers\\expect.js:12867:23)\n    at World.<anonymous> (E:\\Playwright_ETR\\src\\test\\steps\\filterEmployeeName.steps.ts:34:32)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 213569199
             }
           }
         ],
@@ -141,5 +208,69 @@
     "name": "TamilKumar 15-07-2026 Filter feature",
     "tags": [],
     "uri": "src\\test\\features\\filter.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "launch-website;launch-the-url",
+        "keyword": "Scenario",
+        "line": 2,
+        "name": "Launch the url",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 225680799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "User launch the url",
+            "match": {
+              "location": "src\\test\\steps\\lauch.steps.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 598840699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 4,
+            "name": "User can see the website",
+            "match": {
+              "location": "src\\test\\steps\\lauch.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 200346799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 52580200
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "launch-website",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Launch Website",
+    "tags": [],
+    "uri": "src\\test\\features\\lauch.feature"
   }
 ]

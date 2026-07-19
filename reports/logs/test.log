@@ -1,135 +1,22 @@
-[2026-07-15T14:24:20.084Z]INFO-Launching Browser
-[2026-07-15T14:24:21.489Z]INFO-Starting scenario: Launch the url
-[2026-07-15T14:24:22.124Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T14:24:22.869Z]INFO-Scenario Passed: Launch the url
-[2026-07-15T14:24:23.143Z]INFO-Closing browser
-[2026-07-15T14:25:16.107Z]INFO-Launching Browser
-[2026-07-15T14:25:16.858Z]INFO-Starting scenario: Launch the url
-[2026-07-15T14:25:17.675Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T14:25:28.498Z]INFO-Scenario Passed: Launch the url
-[2026-07-15T14:25:28.687Z]INFO-Closing browser
-[2026-07-15T16:10:40.793Z]INFO-Launching Browser
-[2026-07-15T16:10:41.746Z]INFO-Starting scenario: Launch the url
-[2026-07-15T16:10:42.146Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T16:10:42.810Z]INFO-Scenario Passed: Launch the url
-[2026-07-15T16:10:43.065Z]INFO-Closing browser
-[2026-07-15T16:29:57.788Z]INFO-Launching Browser
-[2026-07-15T16:29:58.978Z]INFO-Starting scenario: Launch the url
-[2026-07-15T16:29:59.360Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T16:30:01.377Z]INFO-Scenario Passed: Launch the url
-[2026-07-15T16:30:01.462Z]INFO-Closing browser
-[2026-07-15T16:55:10.970Z]INFO-Launching Browser
-[2026-07-15T16:55:12.062Z]INFO-Starting scenario: Filter employee records by valid employee name
-[2026-07-15T16:55:12.434Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T16:55:13.204Z]INFO-Typing message
-[2026-07-15T16:55:13.580Z]INFO-Message typed on the locator successfully
-[2026-07-15T16:55:13.819Z]ERROR-Scenario Failed: Filter employee records by valid employee name
-[2026-07-15T16:55:13.902Z]INFO-Starting scenario: Filter employee records by valid employee name
-[2026-07-15T16:55:14.191Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T16:55:14.851Z]INFO-Typing message
-[2026-07-15T16:55:15.124Z]INFO-Message typed on the locator successfully
-[2026-07-15T16:55:15.279Z]ERROR-Scenario Failed: Filter employee records by valid employee name
-[2026-07-15T16:55:15.342Z]INFO-Starting scenario: Launch the url
-[2026-07-15T16:55:15.571Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T16:55:16.392Z]INFO-Scenario Passed: Launch the url
-[2026-07-15T16:55:16.465Z]INFO-Closing browser
-[2026-07-15T16:56:03.856Z]INFO-Launching Browser
-[2026-07-15T16:56:04.444Z]INFO-Starting scenario: Filter employee records by valid employee name
-[2026-07-15T16:56:04.791Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T16:56:05.601Z]INFO-Typing message
-[2026-07-15T16:56:05.877Z]INFO-Message typed on the locator successfully
-[2026-07-15T16:56:06.133Z]ERROR-Scenario Failed: Filter employee records by valid employee name
-[2026-07-15T16:56:06.213Z]INFO-Starting scenario: Filter employee records by valid employee name
-[2026-07-15T16:56:06.491Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T16:56:07.166Z]INFO-Typing message
-[2026-07-15T16:56:07.450Z]INFO-Message typed on the locator successfully
-[2026-07-15T16:56:07.600Z]ERROR-Scenario Failed: Filter employee records by valid employee name
-[2026-07-15T16:56:07.669Z]INFO-Closing browser
-[2026-07-15T16:56:33.177Z]INFO-Launching Browser
-[2026-07-15T16:56:33.946Z]INFO-Starting scenario: Filter employee records by valid employee name
-[2026-07-15T16:56:35.301Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T16:56:38.768Z]INFO-Typing message
-[2026-07-15T16:56:40.957Z]INFO-Message typed on the locator successfully
-[2026-07-15T16:56:43.776Z]INFO-Scenario Passed: Filter employee records by valid employee name
-[2026-07-15T16:56:47.444Z]INFO-Starting scenario: Filter employee records by valid employee name
-[2026-07-15T16:56:49.481Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T16:56:51.152Z]INFO-Typing message
-[2026-07-15T16:56:52.138Z]INFO-Message typed on the locator successfully
-[2026-07-15T16:56:53.113Z]INFO-Scenario Passed: Filter employee records by valid employee name
-[2026-07-15T16:56:55.993Z]INFO-Closing browser
-[2026-07-15T16:57:11.833Z]INFO-Launching Browser
-[2026-07-15T16:57:12.475Z]INFO-Starting scenario: Filter employee records by valid employee name
-[2026-07-15T16:57:12.933Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T16:57:13.538Z]INFO-Typing message
-[2026-07-15T16:57:13.821Z]INFO-Message typed on the locator successfully
-[2026-07-15T16:57:14.068Z]ERROR-Scenario Failed: Filter employee records by valid employee name
-[2026-07-15T16:57:14.159Z]INFO-Starting scenario: Filter employee records by valid employee name
-[2026-07-15T16:57:14.432Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T16:57:15.276Z]INFO-Typing message
-[2026-07-15T16:57:15.542Z]INFO-Message typed on the locator successfully
-[2026-07-15T16:57:15.681Z]ERROR-Scenario Failed: Filter employee records by valid employee name
-[2026-07-15T16:57:15.752Z]INFO-Closing browser
-[2026-07-15T16:59:37.446Z]INFO-Launching Browser
-[2026-07-15T16:59:38.121Z]INFO-Starting scenario: Filter employee records by valid employee name
-[2026-07-15T16:59:38.497Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T16:59:39.801Z]ERROR-Scenario Failed: Filter employee records by valid employee name
-[2026-07-15T16:59:39.890Z]INFO-Starting scenario: Filter employee records by valid employee name
-[2026-07-15T16:59:40.174Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T16:59:41.649Z]ERROR-Scenario Failed: Filter employee records by valid employee name
-[2026-07-15T16:59:41.721Z]INFO-Closing browser
-[2026-07-15T17:00:30.028Z]INFO-Launching Browser
-[2026-07-15T17:00:30.670Z]INFO-Starting scenario: Filter employee records by valid employee name
-[2026-07-15T17:00:31.077Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T17:00:32.288Z]ERROR-Scenario Failed: Filter employee records by valid employee name
-[2026-07-15T17:00:32.397Z]INFO-Starting scenario: Filter employee records by valid employee name
-[2026-07-15T17:00:32.659Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T17:00:33.732Z]ERROR-Scenario Failed: Filter employee records by valid employee name
-[2026-07-15T17:00:33.821Z]INFO-Closing browser
-[2026-07-15T17:01:13.320Z]INFO-Launching Browser
-[2026-07-15T17:01:13.993Z]INFO-Starting scenario: Filter employee records by valid employee name
-[2026-07-15T17:01:15.437Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T17:01:24.376Z]ERROR-Scenario Failed: Filter employee records by valid employee name
-[2026-07-15T17:01:42.494Z]INFO-Launching Browser
-[2026-07-15T17:01:43.262Z]INFO-Starting scenario: Filter employee records by valid employee name
-[2026-07-15T17:01:44.771Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T17:02:03.785Z]ERROR-Scenario Failed: Filter employee records by valid employee name
-[2026-07-15T17:03:13.302Z]INFO-Launching Browser
-[2026-07-15T17:03:14.022Z]INFO-Starting scenario: Filter employee records by valid employee name
-[2026-07-15T17:03:15.512Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T17:03:20.368Z]INFO-Scenario Passed: Filter employee records by valid employee name
-[2026-07-15T17:03:22.171Z]INFO-Starting scenario: Filter employee records by valid employee name
-[2026-07-15T17:03:24.090Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T17:03:27.831Z]INFO-Scenario Passed: Filter employee records by valid employee name
-[2026-07-15T17:03:29.870Z]INFO-Closing browser
-[2026-07-15T17:03:45.986Z]INFO-Launching Browser
-[2026-07-15T17:03:46.612Z]INFO-Starting scenario: Filter employee records by valid employee name
-[2026-07-15T17:03:46.940Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T17:03:48.074Z]ERROR-Scenario Failed: Filter employee records by valid employee name
-[2026-07-15T17:03:48.160Z]INFO-Starting scenario: Filter employee records by valid employee name
-[2026-07-15T17:03:48.436Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T17:03:49.473Z]ERROR-Scenario Failed: Filter employee records by valid employee name
-[2026-07-15T17:03:49.540Z]INFO-Closing browser
-[2026-07-15T17:05:12.453Z]INFO-Launching Browser
-[2026-07-15T17:05:13.469Z]INFO-Starting scenario: Filter employee records by valid employee name
-[2026-07-15T17:05:14.150Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T17:05:15.337Z]ERROR-Scenario Failed: Filter employee records by valid employee name
-[2026-07-15T17:05:15.422Z]INFO-Starting scenario: Filter employee records by valid employee name
-[2026-07-15T17:05:15.684Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T17:05:16.957Z]ERROR-Scenario Failed: Filter employee records by valid employee name
-[2026-07-15T17:05:17.028Z]INFO-Closing browser
-[2026-07-15T17:06:03.706Z]INFO-Launching Browser
-[2026-07-15T17:06:04.415Z]INFO-Starting scenario: Filter employee records by valid employee name
-[2026-07-15T17:06:05.421Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T17:06:17.279Z]INFO-Scenario Passed: Filter employee records by valid employee name
-[2026-07-15T17:06:17.395Z]INFO-Starting scenario: Filter employee records by valid employee name
-[2026-07-15T17:06:17.631Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T17:06:28.664Z]INFO-Scenario Passed: Filter employee records by valid employee name
-[2026-07-15T17:06:28.758Z]INFO-Closing browser
-[2026-07-15T17:07:13.779Z]INFO-Launching Browser
-[2026-07-15T17:07:14.527Z]INFO-Starting scenario: Filter employee records by valid employee name
-[2026-07-15T17:07:14.825Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T17:07:17.330Z]INFO-Scenario Passed: Filter employee records by valid employee name
-[2026-07-15T17:07:17.453Z]INFO-Starting scenario: Filter employee records by valid employee name
-[2026-07-15T17:07:17.758Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
-[2026-07-15T17:07:19.466Z]INFO-Scenario Passed: Filter employee records by valid employee name
-[2026-07-15T17:07:19.557Z]INFO-Closing browser
+[2026-07-19T05:19:55.735Z]INFO-Launching Browser
+[2026-07-19T05:19:56.909Z]INFO-Starting scenario: Filter employee records by valid employee name
+[2026-07-19T05:19:58.573Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
+[2026-07-19T05:20:12.991Z]INFO-Scenario Passed: Filter employee records by valid employee name
+[2026-07-19T05:20:18.445Z]INFO-Starting scenario: Filter employee records by valid employee name
+[2026-07-19T05:20:20.048Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
+[2026-07-19T05:20:24.943Z]INFO-Scenario Passed: Filter employee records by valid employee name
+[2026-07-19T05:20:29.056Z]INFO-Closing browser
+[2026-07-19T05:20:47.015Z]INFO-Launching Browser
+[2026-07-19T05:20:47.605Z]INFO-Starting scenario: Filter employee records by valid employee name
+[2026-07-19T05:20:47.889Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
+[2026-07-19T05:20:49.588Z]INFO-Scenario Passed: Filter employee records by valid employee name
+[2026-07-19T05:20:49.717Z]INFO-Starting scenario: Filter employee records by valid employee name
+[2026-07-19T05:20:50.035Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
+[2026-07-19T05:20:52.310Z]INFO-Scenario Passed: Filter employee records by valid employee name
+[2026-07-19T05:20:52.433Z]INFO-Starting scenario: Verify user can search a course by a valid course name
+[2026-07-19T05:20:52.719Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
+[2026-07-19T05:20:53.828Z]ERROR-Scenario Failed: Verify user can search a course by a valid course name
+[2026-07-19T05:20:53.884Z]INFO-Starting scenario: Launch the url
+[2026-07-19T05:20:54.111Z]INFO-Application Launching: https://frontend-69a7.vercel.app/
+[2026-07-19T05:20:54.909Z]INFO-Scenario Passed: Launch the url
+[2026-07-19T05:20:54.970Z]INFO-Closing browser
