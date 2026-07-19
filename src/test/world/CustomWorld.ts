@@ -3,6 +3,7 @@ import { World } from "@cucumber/cucumber";
 import { setWorldConstructor } from '@cucumber/cucumber';
 import { logger } from '../utilities/logger';
 import { BasePage } from '../pages/BasePage';
+import { HomePage } from '../pages/HomePage';
 import {filterpage} from  "../pages/filterPage"
 
 export class CustomWorld extends World{
@@ -11,6 +12,7 @@ export class CustomWorld extends World{
     page!:Page;
     logger=logger;
     bp!:BasePage;
+    hp!:HomePage;
     fp!:filterpage
 }
 
