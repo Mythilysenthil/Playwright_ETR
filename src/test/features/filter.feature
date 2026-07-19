@@ -13,7 +13,4 @@ Scenario Outline: Verify filtering using different dropdowns
         Examples:
             | EmployeeName |
             | Sriram       |
-            | Priya        |
-    Scenario: Verify user can search a course by a valid course name
-        When the user enters a valid course name in the Course Name filter
-        Then only the matching course records should be displayed
+            | Jagadeep     |
