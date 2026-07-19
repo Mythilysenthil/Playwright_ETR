@@ -16,6 +16,6 @@ Scenario Outline: Verify filtering using different dropdowns
 
 Examples:
 | Dropdown       | Value      |
-| Project Name   | CDE        |
+| Project Name   | ABC        |
 | Training Type  | Udemy      |
 | Status         | Completed  |
