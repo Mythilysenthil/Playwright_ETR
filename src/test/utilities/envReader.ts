@@ -2,6 +2,7 @@ import * as dotenv from "dotenv";
 import * as path from "path";
 
 export const getEnv = (): string => {
+
     const envName = process.env.ENV || "qa";
     const envPath = path.resolve( "env", `.env.${envName}`);
     console.log(`Loading environment variables from: ${envPath}`);
