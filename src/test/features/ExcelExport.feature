@@ -2,7 +2,7 @@
 Feature: Export Employee Data to Excel
 
   Background:
-    Given the user launches the application
+    Given Given User launch the url
 
   Scenario: Verify Export to Excel functionality 
     When the user clicks the Export to Excel button
