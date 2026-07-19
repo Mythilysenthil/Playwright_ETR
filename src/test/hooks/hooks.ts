@@ -17,7 +17,7 @@ BeforeAll(async()=>{
 Before(async function(this:CustomWorld,scenario){
     logger.info(`Starting scenario: ${scenario.pickle.name}`)
     this.browser=browser
-    this.browserContext=await browser.newContext()
+    this.browserContext=await browser.newContext({ ignoreHTTPSErrors: true })
     this.page = await this.browserContext.newPage()
     this.bp=new BasePage(this.page)
     this.hp=new HomePage(this.page)
