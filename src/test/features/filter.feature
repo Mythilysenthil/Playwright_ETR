@@ -1,9 +1,13 @@
 @Tamil
 Feature: Filter Functionality
 
+Description:
+  As a user,
+  I want to filter the records using different dropdowns,
+  So that I can quickly find the required data without manually searching through all records.
 
 Background:
-    Given User launch the url
+            Given User launch the url
 
 
 Scenario Outline: Verify filtering using different dropdowns
@@ -13,4 +17,7 @@ Scenario Outline: Verify filtering using different dropdowns
         Examples:
             | EmployeeName |
             | Sriram       |
-            | Jagadeep     |
+            | Priya        |
+    Scenario: Verify user can search a course by a valid course name
+        When the user enters a valid course name in the Course Name filter
+        Then only the matching course records should be displayed
