@@ -3,6 +3,8 @@ import{chromium,Browser} from '@playwright/test'
 import{CustomWorld}from '../world/CustomWorld'
 import {logger}from '../utilities/logger'
 import { BasePage } from '../pages/BasePage'
+import { AddcoursePage } from '../pages/AddcoursePage'
+import { sideBarPage } from '../pages/sideBarPage'
 
 let browser : Browser
 setDefaultTimeout(90 * 1000);
@@ -18,6 +20,9 @@ Before(async function(this:CustomWorld,scenario){
     this.browserContext=await browser.newContext()
     this.page = await this.browserContext.newPage()
     this.bp=new BasePage(this.page)
+    this.ap=new AddcoursePage(this.page)
+    this.sp=new sideBarPage(this.page)
+    await this.bp.Navigate();
 })
 
 After(async function(this:CustomWorld,scenario){

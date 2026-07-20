@@ -62,4 +62,16 @@ export class BasePage {
         }
     }
 
+    async SelectOption(locator: Locator, value: string) {
+        await locator.selectOption(value);
+    }
+
+    async TableCount(locator: Locator){
+        return await locator.count();
+    }
+
+    async SelectDropdown(locator: Locator, optionText: string) {
+        await locator.click();
+        await this.page.getByRole('option', { name: optionText }).click();
+    }
 }
