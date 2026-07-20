@@ -1,11 +1,19 @@
-Feature: TamilKumar 15-07-2026 Filter feature
-    Background:
-        Given User launch the url
-    Scenario Outline: Filter employee records by valid employee name
-        When User enters "<EmployeeName>" in the Employee Name filter
-        Then Only records with employee name "<EmployeeName>" should be displayed
+@Tamil
+Feature: Filter Functionality
+
+
+Background:
+    Given User launch the url
+
+
+Scenario Outline: Verify filtering using different dropdowns
+    When User selects "<Dropdown>" as "<Value>"
+    Then Records should display containing "<Value>" 
 
         Examples:
             | EmployeeName |
             | Sriram       |
-            | Jagadeep     |
+            | Priya        |
+    Scenario: Verify user can search a course by a valid course name
+        When the user enters a valid course name in the Course Name filter
+        Then only the matching course records should be displayed

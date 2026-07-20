@@ -7,7 +7,9 @@ export class HomePage extends BasePage{
     readonly filterEmployeeName:Locator
     readonly employeeNameFilter :Locator
     readonly exportToExcelButton:Locator
-
+    readonly courseName:Locator
+    readonly courseNamesFilter:Locator
+    
     constructor(page:Page){
         super(page);
         this.page=page;
@@ -15,6 +17,8 @@ export class HomePage extends BasePage{
         this.filterEmployeeName=page.locator("//input[@id='_r_8_']")
         this.employeeNameFilter=page.locator("//tbody/tr/td[3]");
         this.exportToExcelButton=page.locator("//button[normalize-space()='Export to Excel']");
+        this.courseName=page.locator("//input[@id='_r_9_']")
+        this.courseNamesFilter=page.locator("//tbody/tr/td[4]")
     }
     async setEmployeeName(name: string) {
     await this.Fill(this.filterEmployeeName, name);
@@ -32,6 +36,12 @@ export class HomePage extends BasePage{
     async clickExportButton() {
         const downloadPromise = this.page.waitForEvent("download");
         await this.Click(this.exportToExcelButton);
-        return await downloadPromise;      
+        return await downloadPromise;
+    }      
+    async setCourseName(course:string){
+        await this.Fill(this.courseName,course)
+    }
+    async getCourseNames(){
+        return await this.courseNamesFilter.allTextContents();
     }
 }
