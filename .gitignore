@@ -7,6 +7,7 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+<<<<<<< HEAD
 
 # Allure Reports
 allure-results/
@@ -34,3 +35,8 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+=======
+/allure-results/
+/reports/
+/rerun/
+>>>>>>> main

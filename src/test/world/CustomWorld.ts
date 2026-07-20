@@ -1,4 +1,4 @@
-import { Browser, BrowserContext, Page } from 'playwright';
+import { Browser, BrowserContext, Page,Download } from 'playwright';
 import { World } from "@cucumber/cucumber";
 import { setWorldConstructor } from '@cucumber/cucumber';
 import { logger } from '../utilities/logger';
@@ -6,6 +6,8 @@ import { BasePage } from '../pages/BasePage';
 import { sideBarPage }from '../pages/sideBarPage';
 import { AddcoursePage } from '../pages/AddcoursePage';
 
+import { HomePage } from '../pages/HomePage';
+import {filterpage} from  "../pages/filterPage"
 
 export class CustomWorld extends World{
     browser!:Browser;
@@ -15,6 +17,9 @@ export class CustomWorld extends World{
     bp!:BasePage;
     sp!:sideBarPage;
     ap!:AddcoursePage;
+    hp!:HomePage;
+    fp!:filterpage;
+    download!: Download;
 }
 
 setWorldConstructor(CustomWorld);

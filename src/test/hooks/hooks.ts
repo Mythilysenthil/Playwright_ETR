@@ -5,6 +5,8 @@ import {logger}from '../utilities/logger'
 import { BasePage } from '../pages/BasePage'
 import { AddcoursePage } from '../pages/AddcoursePage'
 import { sideBarPage } from '../pages/sideBarPage'
+import { filterpage } from '../pages/filterPage'
+import { HomePage } from '../pages/HomePage'
 
 let browser : Browser
 setDefaultTimeout(90 * 1000);
@@ -17,12 +19,14 @@ BeforeAll(async()=>{
 Before(async function(this:CustomWorld,scenario){
     logger.info(`Starting scenario: ${scenario.pickle.name}`)
     this.browser=browser
-    this.browserContext=await browser.newContext()
+    this.browserContext=await browser.newContext({ ignoreHTTPSErrors: true })
     this.page = await this.browserContext.newPage()
     this.bp=new BasePage(this.page)
     this.ap=new AddcoursePage(this.page)
     this.sp=new sideBarPage(this.page)
     await this.bp.Navigate();
+    this.hp=new HomePage(this.page)
+    this.fp = new filterpage(this.page)
 })
 
 After(async function(this:CustomWorld,scenario){
