@@ -1,7 +1,7 @@
 import {Page, Locator } from '@playwright/test';
 import { BasePage } from "../../test/pages/BasePage";
 
-export class AddcoursePage extends BasePage{
+export class sideBarPage extends BasePage{
     readonly summary:Locator;
     readonly addCourse:Locator;
     
@@ -10,5 +10,7 @@ export class AddcoursePage extends BasePage{
         this.summary = page.locator("//button[@aria-label='Training Summary']");
         this.addCourse = page.locator("//button[@aria-label='Add Training']");
     }
-    
+    async ClickAddCourse(){
+        await this.Click(this.addCourse);
+    }
 }

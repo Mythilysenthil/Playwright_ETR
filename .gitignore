@@ -1,11 +1,42 @@
+# Dependencies
+node_modules/
 
 # Playwright
-node_modules/
 /test-results/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+<<<<<<< HEAD
+
+# Allure Reports
+allure-results/
+allure-report/
+
+# Cucumber Reports
+reports/
+
+# Screenshots
+*.png
+*.jpg
+*.jpeg
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+=======
 /allure-results/
 /reports/
 /rerun/
+>>>>>>> main

@@ -3,6 +3,8 @@ import{chromium,Browser} from '@playwright/test'
 import{CustomWorld}from '../world/CustomWorld'
 import {logger}from '../utilities/logger'
 import { BasePage } from '../pages/BasePage'
+import { AddcoursePage } from '../pages/AddcoursePage'
+import { sideBarPage } from '../pages/sideBarPage'
 import { filterpage } from '../pages/filterPage'
 import { HomePage } from '../pages/HomePage'
 
@@ -20,6 +22,9 @@ Before(async function(this:CustomWorld,scenario){
     this.browserContext=await browser.newContext({ ignoreHTTPSErrors: true })
     this.page = await this.browserContext.newPage()
     this.bp=new BasePage(this.page)
+    this.ap=new AddcoursePage(this.page)
+    this.sp=new sideBarPage(this.page)
+    await this.bp.Navigate();
     this.hp=new HomePage(this.page)
     this.fp = new filterpage(this.page)
 })
