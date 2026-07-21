@@ -1,18 +1,14 @@
 @Tamil
-Feature: Filter Functionality
-
-Description:
-  As a user,
-  I want to filter the records using different dropdowns,
-  So that I can quickly find the required data without manually searching through all records.
-
-Background:
-            Given User launch the url
+Feature: TamilKumar Filter Functionality
 
 
-Scenario Outline: Verify filtering using different dropdowns
-    When User selects "<Dropdown>" as "<Value>"
-    Then Records should display containing "<Value>" 
+    Background:
+        Given User launch the url
+
+
+    Scenario Outline: Verify filtering using different dropdowns
+        When User enters "<EmployeeName>" in the Employee Name filter
+        Then Only records with employee name "<EmployeeName>" should be displayed
 
         Examples:
             | EmployeeName |
