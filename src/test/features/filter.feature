@@ -1,14 +1,14 @@
 @Tamil
-Feature: Filter Functionality
+Feature: TamilKumar Filter Functionality
 
 
-Background:
-    Given User launch the url
+    Background:
+        Given User launch the url
 
 
-Scenario Outline: Verify filtering using different dropdowns
-    When User selects "<Dropdown>" as "<Value>"
-    Then Records should display containing "<Value>" 
+    Scenario Outline: Verify filtering using different dropdowns
+        When User enters "<EmployeeName>" in the Employee Name filter
+        Then Only records with employee name "<EmployeeName>" should be displayed
 
         Examples:
             | EmployeeName |
