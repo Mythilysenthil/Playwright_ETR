@@ -1,11 +1,21 @@
-Feature: TamilKumar 15-07-2026 Filter feature
-    Background:
-        Given User launch the url
-    Scenario Outline: Filter employee records by valid employee name
-        When User enters "<EmployeeName>" in the Employee Name filter
-        Then Only records with employee name "<EmployeeName>" should be displayed
+@krishna
+Feature: Filter Functionality
 
-        Examples:
-            | EmployeeName |
-            | Sriram       |
-            | Jagadeep     |
+Description:
+  As a user,
+  I want to filter the records using different dropdowns,
+  So that I can quickly find the required data without manually searching through all records.
+
+Background:
+            Given User launch the url
+
+
+Scenario Outline: Verify filtering using different dropdowns
+    When User selects "<Dropdown>" as "<Value>"
+    Then Records should display containing "<Value>" 
+
+Examples:
+| Dropdown       | Value      |
+| Project Name   | CDE        |
+| Training Type  | Udemy      |
+| Status         | Completed  |
