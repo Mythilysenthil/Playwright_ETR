@@ -37,8 +37,7 @@ export class BasePage {
             const url = getEnv();
             logger.info(`Application Launching: ${url}`);
             await this.page.goto(url, {
-                waitUntil: 'domcontentloaded',
-                timeout: TIMEOUTS.LONG
+                waitUntil: 'domcontentloaded'
             });
         } catch (error) {
             logger.error(`Failed to launch application: ${error}`);

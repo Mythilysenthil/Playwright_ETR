@@ -24,9 +24,10 @@ Before(async function(this:CustomWorld,scenario){
     this.bp=new BasePage(this.page)
     this.ap=new AddcoursePage(this.page)
     this.sp=new sideBarPage(this.page)
-    await this.bp.Navigate();
     this.hp=new HomePage(this.page)
     this.fp = new filterpage(this.page)
+    await this.bp.Navigate();
+    
 })
 
 After(async function(this:CustomWorld,scenario){

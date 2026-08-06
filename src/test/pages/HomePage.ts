@@ -9,7 +9,8 @@ export class HomePage extends BasePage{
     readonly exportToExcelButton:Locator
     readonly courseName:Locator
     readonly courseNamesFilter:Locator
-    
+    readonly empIdFilter:Locator
+    readonly empIdFilterValue:Locator
     constructor(page:Page){
         super(page);
         this.page=page;
@@ -19,6 +20,8 @@ export class HomePage extends BasePage{
         this.exportToExcelButton=page.locator("//button[normalize-space()='Export to Excel']");
         this.courseName=page.locator("//input[@id='_r_9_']")
         this.courseNamesFilter=page.locator("//tbody/tr/td[4]")
+        this.empIdFilter=page.locator("//input[@id='_r_7_']")
+        this.empIdFilterValue=page.locator("//tbody/tr/td[2]");
     }
     async setEmployeeName(name: string) {
     await this.Fill(this.filterEmployeeName, name);
@@ -43,5 +46,11 @@ export class HomePage extends BasePage{
     }
     async getCourseNames(){
         return await this.courseNamesFilter.allTextContents();
+    }
+    async setEmpId(empId:string){
+        await this.Fill(this.empIdFilter,empId)
+    }
+    async getEmpIdValues(){
+        return await this.empIdFilterValue.allTextContents();
     }
 }
