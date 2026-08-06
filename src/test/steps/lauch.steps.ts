@@ -3,7 +3,7 @@ import { CustomWorld } from '../world/CustomWorld';
 import { expect } from '@playwright/test';
 Given('User launch the url', async function (this:CustomWorld) {
   // Write code here that turns the phrase above into concrete actions
-    await this.bp.Navigate();
+  await this.bp.Navigate();
 });
 
 Then('User can see the website', async function (this:CustomWorld) {
