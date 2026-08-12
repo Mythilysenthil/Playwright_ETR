@@ -22,7 +22,7 @@ export class AddcoursePage extends BasePage{
         this.status = page.getByLabel("Status");
         this.completed = page.locator("//input[@name='percentCompleted']");
         this.addbtn = page.getByRole('button', {name: 'Add',exact: true});
-        this.count = page.locator("//table[@class='MuiTable-root MuiTable-stickyHeader css-1guurvj']");
+        this.count = page.locator("table.MuiTable-stickyHeader");
     }
     async enterMandatoryFields(empId:string, name:string, course:string, trainer:string, type:string, status:string, completed:string){
         await this.Fill(this.empid,empId);
