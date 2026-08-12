@@ -21,6 +21,6 @@ Feature: Filter Functionality
       | Status        | Completed |
 
     
-    Scenario: Apply all dropdown filters together and validate results
+  Scenario: Apply all dropdown filters together and validate results
       When User applies all dropdown filters together
       Then Records should display containing all filters
