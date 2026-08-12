@@ -11,6 +11,7 @@ export class HomePage extends BasePage{
     readonly courseNamesFilter:Locator
     readonly edit:Locator
     readonly name:Locator
+    readonly deleteIcon:Locator
     
     constructor(page:Page){
         super(page);
@@ -21,7 +22,7 @@ export class HomePage extends BasePage{
         this.exportToExcelButton=page.locator("//button[normalize-space()='Export to Excel']");
         this.courseName=page.locator("//input[@id='_r_9_']")
         this.courseNamesFilter=page.locator("//tbody/tr/td[4]")
-
+        this.deleteIcon=page.locator("//button[@aria-label='delete']").first()
         this.edit = page.locator("//html/body/div/div/main/div[2]/div[3]/table/tbody/tr[1]/td[11]/div/button[1]")
         this.name = page.locator("//table/tbody/tr[1]/td[3]")
     }
@@ -56,5 +57,9 @@ export class HomePage extends BasePage{
     
     async getName(){
         return await this.name.textContent()
+    }
+
+    async clickDeleteIcon(){
+        await this.Click(this.deleteIcon);
     }
 }
