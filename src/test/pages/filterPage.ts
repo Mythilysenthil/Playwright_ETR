@@ -53,4 +53,24 @@ export class filterpage extends BasePage {
 
         await this.VerifyTableContains(this.rows, value);
     }
+
+    async verifyRecordsContainAll(project: string, training: string, status: string): Promise<boolean> {
+
+        await this.WaitForRows(this.rows);
+
+        const rowCount = await this.rows.count();
+
+        if (rowCount === 0) return false;
+
+        for (let i = 0; i < rowCount; i++) {
+
+            const rowText = (await this.GetText(this.rows.nth(i))).toLowerCase();
+
+            if (!rowText.includes(project.toLowerCase()) || !rowText.includes(training.toLowerCase()) || !rowText.includes(status.toLowerCase())) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
