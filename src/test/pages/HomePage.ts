@@ -64,4 +64,7 @@ export class HomePage extends BasePage{
     async clickDeleteIcon(){
         await this.Click(this.deleteIcon);
     }
+    async clickEdit(){
+        await this.Click(this.edit);
+    }
 }
