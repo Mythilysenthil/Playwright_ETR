@@ -4,7 +4,7 @@ import { expect } from '@playwright/test';
 import { EditCourse } from "../test-data/editcourse.json";
 
 When(`the User clicks the edit icon`, async function (this:CustomWorld) {
-    await this.hp.clickEdit()
+    // await this.hp.clickEdit()
 });
 
 When(`User clicks the Update button`, async function (this:CustomWorld){

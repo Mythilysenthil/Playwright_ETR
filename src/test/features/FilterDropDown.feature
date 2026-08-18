@@ -19,3 +19,8 @@ Feature: Filter Functionality
       | Project Name  | ABC       |
       | Training Type | Udemy     |
       | Status        | Completed |
+
+    
+  Scenario: Apply all dropdown filters together and validate results
+      When User applies all dropdown filters together
+      Then Records should display containing all filters
