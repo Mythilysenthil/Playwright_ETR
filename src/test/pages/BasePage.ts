@@ -175,4 +175,37 @@ export class BasePage {
             throw error;
         }
     }
+
+    async HandleDialog(action: () => Promise<void>): Promise<string> {
+    try {
+        logger.info('Waiting for browser dialog');
+
+        let dialogMessage = '';
+
+        const dialogPromise = this.page.waitForEvent('dialog', {
+            timeout: TIMEOUTS.MEDIUM
+        }).then(async dialog => {
+
+            dialogMessage = dialog.message();
+
+            logger.info(`Dialog type: ${dialog.type()}`);
+            logger.info(`Dialog message: ${dialogMessage}`);
+
+            await dialog.accept();
+
+            logger.info('Dialog accepted successfully');
+        });
+
+        await Promise.all([
+            dialogPromise,
+            action()
+        ]);
+
+        return dialogMessage;
+
+    } catch (error) {
+        logger.error(`Failed while handling dialog: ${error}`);
+        throw error;
+    }
+}
 }

@@ -20,6 +20,7 @@ export class CustomWorld extends World{
     hp!:HomePage;
     fp!:filterpage;
     download!: Download;
+    errorMessage: string = "";
 }
 
 setWorldConstructor(CustomWorld);

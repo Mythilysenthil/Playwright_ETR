@@ -56,4 +56,10 @@ export class AddcoursePage extends BasePage{
     async ClickUpdateBtn(){
         await this.Click(this.updateButton);
     }
+
+    async ClickAddBtnAndGetErrorMessage(): Promise<string> {
+        return await this.HandleDialog(async () => {
+           await this.Click(this.addbtn);
+        });
+    }
 }
