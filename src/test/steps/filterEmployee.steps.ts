@@ -75,3 +75,17 @@ Then('only the matching course records should be displayed based on the provided
         await expect(trainerName.trim()).toBe(expectedTrainerName);
     }
 });
+
+When('the user enters a valid {string} percentage in the Percentage filter', async function ( this: CustomWorld,percentage: string) {
+  // Write code here that turns the phrase above into concrete actions
+  await this.hp.setPercentage(percentage);
+});
+
+Then('only the matching employee records should be displayed based on the provided {string}', async function (this: CustomWorld, percentage: string) {
+  // Write code here that turns the phrase above into concrete actions
+  const percentageValues = await this.hp.getPercentageValues();
+  for (const percentageValue of percentageValues) {
+        expect(percentageValue.replace("%", "").trim()).toBe(percentage);
+    }
+ 
+});

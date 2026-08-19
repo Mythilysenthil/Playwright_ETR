@@ -17,6 +17,10 @@ export class HomePage extends BasePage{
     readonly empIdFilter:Locator
     readonly empIdFilterValue:Locator
     readonly trainerNameFilterValue:Locator
+    readonly percentageFilter:Locator
+    readonly percentageFilterValue:Locator
+    readonly employeeRow: Locator;
+
     constructor(page:Page){
         super(page);
         this.page=page;
@@ -26,13 +30,16 @@ export class HomePage extends BasePage{
         this.exportToExcelButton=page.locator("//button[normalize-space()='Export to Excel']");
         this.courseName=page.locator("//input[@id='_r_9_']")
         this.courseNamesFilter=page.locator("//tbody/tr/td[4]")
-        this.deleteIcon=page.locator("//button[@aria-label='delete']").first();
+        this.deleteIcon=page.locator("//button[@aria-label='delete']").first()
         this.edit = page.locator("//html/body/div/div/main/div[2]/div[3]/table/tbody/tr[1]/td[11]/div/button[1]")
         this.name = page.locator("//table/tbody/tr[1]/td[3]")
         this.empIdFilter=page.locator("//input[@id='_r_7_']")
         this.empIdFilterValue=page.locator("//tbody/tr/td[2]");
         this.TrainerNameFilter=page.locator("//input[@id='_r_a_']");
         this.trainerNameFilterValue=page.locator("//tbody/tr/td[5]");
+        this.percentageFilter=page.locator("//input[@id='_r_h_']");
+        this.percentageFilterValue=page.locator("//tbody/tr/td[10]");
+        this.employeeRow = page.locator('//tbody//tr');
     }
     async setEmployeeName(name: string) {
     await this.Fill(this.filterEmployeeName, name);
@@ -79,5 +86,12 @@ export class HomePage extends BasePage{
     async getTrainerNameValues(){
         await this.trainerNameFilterValue.first().waitFor({ state: 'visible' });
         return await this.trainerNameFilterValue.allTextContents();
+    }
+    async setPercentage(percentage:string){
+        await this.Fill(this.percentageFilter, percentage);
+    }
+    async getPercentageValues(){
+        await this.percentageFilterValue.first().waitFor({ state: 'visible' });
+        return await this.percentageFilterValue.allTextContents();
     }
 }
