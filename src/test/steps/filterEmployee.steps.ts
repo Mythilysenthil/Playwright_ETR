@@ -59,3 +59,33 @@ Then('only the matching course records should be displayed based on the provided
         expect(empId.trim()).toBe(expectedEmpId!);
     }
 });
+When('the user enters a valid Trainer Name in the Trainer Name filter', async function (this: CustomWorld) {
+  // Write code here that turns the phrase above into concrete actions
+  await this.hp.setTrainerName(TrainerNameData.TrainerName?.Name!);
+});
+
+Then('only the matching course records should be displayed based on the provided Trainer Name', async function (this: CustomWorld) {
+  // Write code here that turns the phrase above into concrete actions
+    const expectedTrainerName = TrainerNameData.TrainerName?.Name!;
+
+    const trainerNameValues = await this.hp.getTrainerNameValues();
+    await expect(trainerNameValues.length).toBeGreaterThan(0);
+
+    for (const trainerName of trainerNameValues) {
+        await expect(trainerName.trim()).toBe(expectedTrainerName);
+    }
+});
+
+When('the user enters a valid {string} percentage in the Percentage filter', async function ( this: CustomWorld,percentage: string) {
+  // Write code here that turns the phrase above into concrete actions
+  await this.hp.setPercentage(percentage);
+});
+
+Then('only the matching employee records should be displayed based on the provided {string}', async function (this: CustomWorld, percentage: string) {
+  // Write code here that turns the phrase above into concrete actions
+  const percentageValues = await this.hp.getPercentageValues();
+  for (const percentageValue of percentageValues) {
+        expect(percentageValue.replace("%", "").trim()).toBe(percentage);
+    }
+ 
+});
