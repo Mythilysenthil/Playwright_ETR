@@ -3,7 +3,7 @@
         "empId": "102",
         "name": "demo_employee",
         "course": "Testing",
-        "trainer": "demo_trainer",
+        "trainer": "Demo_Employee",
         "type": "Classroom",
         "status": "In Progress",
         "completed": "50"

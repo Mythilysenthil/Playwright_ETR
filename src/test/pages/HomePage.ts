@@ -1,5 +1,6 @@
 import { Locator, Page} from "@playwright/test";
 import { BasePage } from "./BasePage";
+import { TIMEOUT } from "dns";
 
 export class HomePage extends BasePage{
     readonly page:Page;
@@ -58,13 +59,15 @@ export class HomePage extends BasePage{
     async setCourseName(course:string){
         await this.Fill(this.courseName,course)
     }
-    async getCourseNames(){
-        return await this.courseNamesFilter.allTextContents();
-    }
+    async getCourseNames() {
+    await this.courseNamesFilter.first().waitFor({ state: 'visible' });
+    return await this.courseNamesFilter.allTextContents();
+}
     async setEmpId(empId:string){
-        await this.Fill(this.empIdFilter,empId)
+        await this.Fill(this.empIdFilter, empId.toString());
     }
     async getEmpIdValues(){
+        await this.empIdFilterValue.first().waitFor({ state: 'visible' });
         return await this.empIdFilterValue.allTextContents();
     }
 

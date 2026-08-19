@@ -20,7 +20,7 @@ export class CustomWorld extends World{
     hp!:HomePage;
     fp!:filterpage;
     download!: Download;
-    initialEmployeeCount!: number;
+    errorMessage: string = "";
 }
 
 setWorldConstructor(CustomWorld);
