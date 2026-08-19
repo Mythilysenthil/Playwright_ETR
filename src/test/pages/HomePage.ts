@@ -19,6 +19,8 @@ export class HomePage extends BasePage{
     readonly trainerNameFilterValue:Locator
     readonly percentageFilter:Locator
     readonly percentageFilterValue:Locator
+    readonly employeeRow: Locator;
+
     constructor(page:Page){
         super(page);
         this.page=page;
@@ -37,6 +39,7 @@ export class HomePage extends BasePage{
         this.trainerNameFilterValue=page.locator("//tbody/tr/td[5]");
         this.percentageFilter=page.locator("//input[@id='_r_h_']");
         this.percentageFilterValue=page.locator("//tbody/tr/td[10]");
+        this.employeeRow = page.locator('//tbody//tr');
     }
     async setEmployeeName(name: string) {
     await this.Fill(this.filterEmployeeName, name);
@@ -72,7 +75,6 @@ export class HomePage extends BasePage{
     }
 
     async clickDeleteIcon(){
-        await this.page.waitForTimeout(3000); // Wait for 1 second before clicking the delete icon
         await this.Click(this.deleteIcon);
     }
     async clickEdit(){
