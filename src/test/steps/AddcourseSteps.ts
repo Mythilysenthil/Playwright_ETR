@@ -27,3 +27,11 @@ When(`User clicks the Add button`, async function (this: CustomWorld) {
 Then(`User should see the training added successfully in the list`, async function (this: CustomWorld) {
     await expect(this.ap.count).not.toHaveCount(0, { timeout: TIMEOUTS.MEDIUM });
 });
+
+When(`User clicks the Add button with missing mandatory details`,async function (this: CustomWorld) {
+    this.errorMessage = await this.ap.ClickAddBtnAndGetErrorMessage();
+});
+
+Then(`User should see the {string} error message`,async function (this: CustomWorld, expectedMessage: string) {
+    expect(this.errorMessage).toBe(expectedMessage);
+});
