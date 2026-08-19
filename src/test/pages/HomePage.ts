@@ -1,5 +1,6 @@
 import { Locator, Page} from "@playwright/test";
 import { BasePage } from "./BasePage";
+import { TIMEOUT } from "dns";
 
 export class HomePage extends BasePage{
     readonly page:Page;
@@ -12,9 +13,10 @@ export class HomePage extends BasePage{
     readonly edit:Locator
     readonly name:Locator
     readonly deleteIcon:Locator
-    
+    readonly TrainerNameFilter:Locator
     readonly empIdFilter:Locator
     readonly empIdFilterValue:Locator
+    readonly trainerNameFilterValue:Locator
     constructor(page:Page){
         super(page);
         this.page=page;
@@ -29,6 +31,8 @@ export class HomePage extends BasePage{
         this.name = page.locator("//table/tbody/tr[1]/td[3]")
         this.empIdFilter=page.locator("//input[@id='_r_7_']")
         this.empIdFilterValue=page.locator("//tbody/tr/td[2]");
+        this.TrainerNameFilter=page.locator("//input[@id='_r_a_']");
+        this.trainerNameFilterValue=page.locator("//tbody/tr/td[5]");
     }
     async setEmployeeName(name: string) {
     await this.Fill(this.filterEmployeeName, name);
@@ -51,13 +55,15 @@ export class HomePage extends BasePage{
     async setCourseName(course:string){
         await this.Fill(this.courseName,course)
     }
-    async getCourseNames(){
-        return await this.courseNamesFilter.allTextContents();
-    }
+    async getCourseNames() {
+    await this.courseNamesFilter.first().waitFor({ state: 'visible' });
+    return await this.courseNamesFilter.allTextContents();
+}
     async setEmpId(empId:string){
-        await this.Fill(this.empIdFilter,empId)
+        await this.Fill(this.empIdFilter, empId.toString());
     }
     async getEmpIdValues(){
+        await this.empIdFilterValue.first().waitFor({ state: 'visible' });
         return await this.empIdFilterValue.allTextContents();
     }
 
@@ -66,5 +72,12 @@ export class HomePage extends BasePage{
     }
     async clickEdit(){
         await this.Click(this.edit);
+    }
+    async setTrainerName(trainerName:string){
+        await this.Fill(this.TrainerNameFilter, trainerName);
+    }
+    async getTrainerNameValues(){
+        await this.trainerNameFilterValue.first().waitFor({ state: 'visible' });
+        return await this.trainerNameFilterValue.allTextContents();
     }
 }
