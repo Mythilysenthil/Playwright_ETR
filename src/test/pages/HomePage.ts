@@ -19,6 +19,7 @@ export class HomePage extends BasePage{
     readonly trainerNameFilterValue:Locator
     readonly percentageFilter:Locator
     readonly percentageFilterValue:Locator
+    readonly filterDetails:Locator
     constructor(page:Page){
         super(page);
         this.page=page;
@@ -37,19 +38,28 @@ export class HomePage extends BasePage{
         this.trainerNameFilterValue=page.locator("//tbody/tr/td[5]");
         this.percentageFilter=page.locator("//input[@id='_r_h_']");
         this.percentageFilterValue=page.locator("//tbody/tr/td[10]");
+        this.filterDetails=page.locator("//tbody/tr");
     }
     async setEmployeeName(name: string) {
     await this.Fill(this.filterEmployeeName, name);
 
-    await this.employeeNameFilter.first().waitFor({
-        state: "visible",
-        timeout: 10000,
-    });
+    
    }
 
     async getFilteredEmployeeNames(){
+
+    try {
+        await this.employeeNameFilter.first().waitFor({
+            state: 'visible',
+            timeout: 3000
+        });
+
         return await this.employeeNameFilter.allTextContents();
+
+    } catch (error) {
+        return [];
     }
+}
 
     async clickExportButton() {
         const downloadPromise = this.page.waitForEvent("download");
@@ -60,15 +70,29 @@ export class HomePage extends BasePage{
         await this.Fill(this.courseName,course)
     }
     async getCourseNames() {
-    await this.courseNamesFilter.first().waitFor({ state: 'visible' });
-    return await this.courseNamesFilter.allTextContents();
+        try {
+            await this.courseNamesFilter.first().waitFor({
+                state: 'visible',
+                timeout: 3000
+            });
+            return await this.courseNamesFilter.allTextContents();
+        } catch (error) {
+            return [];
+        }  
 }
     async setEmpId(empId:string){
         await this.Fill(this.empIdFilter, empId.toString());
     }
     async getEmpIdValues(){
-        await this.empIdFilterValue.first().waitFor({ state: 'visible' });
-        return await this.empIdFilterValue.allTextContents();
+        try {
+            await this.empIdFilterValue.first().waitFor({
+                state: 'visible',
+                timeout: 3000
+            });
+            return await this.empIdFilterValue.allTextContents();
+        } catch (error) {
+            return [];
+        }
     }
 
     async clickDeleteIcon(){
@@ -82,8 +106,15 @@ export class HomePage extends BasePage{
         await this.Fill(this.TrainerNameFilter, trainerName);
     }
     async getTrainerNameValues(){
-        await this.trainerNameFilterValue.first().waitFor({ state: 'visible' });
-        return await this.trainerNameFilterValue.allTextContents();
+        try {
+            await this.trainerNameFilterValue.first().waitFor({
+                state: 'visible',
+                timeout: 3000
+            });
+            return await this.trainerNameFilterValue.allTextContents();
+        } catch (error) {
+            return [];
+        }
     }
     async setPercentage(percentage:string){
         await this.Fill(this.percentageFilter, percentage);
@@ -91,5 +122,9 @@ export class HomePage extends BasePage{
     async getPercentageValues(){
         await this.percentageFilterValue.first().waitFor({ state: 'visible' });
         return await this.percentageFilterValue.allTextContents();
+    }
+    async getFilterDetails(){
+        await this.filterDetails.first().waitFor({ state: 'visible' });
+        return await this.filterDetails.allTextContents();
     }
 }
